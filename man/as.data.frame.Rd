@@ -226,19 +226,19 @@ stopifnot(is.data.frame(x), identical(dim(x), c(15360L, 6L)))
 \usage{
   \S4method{as.data.frame}{MOPMX}(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) 
+    include = FALSE, ..., stringsAsFactors = TRUE) 
   \S4method{as.data.frame}{OPM}(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) 
+    include = FALSE, ..., stringsAsFactors = TRUE) 
   \S4method{as.data.frame}{OPMA}(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) 
+    include = FALSE, ..., stringsAsFactors = TRUE) 
   \S4method{as.data.frame}{OPMD}(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) 
+    include = FALSE, ..., stringsAsFactors = TRUE) 
   \S4method{as.data.frame}{OPMS}(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) 
+    include = FALSE, ..., stringsAsFactors = TRUE) 
   \S4method{as.data.frame}{kegg_compound}(x, row.names = NULL,
     optional = TRUE, ..., stringsAsFactors = FALSE) 
   \S4method{as.data.frame}{kegg_compounds}(x, row.names = NULL,

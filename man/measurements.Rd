@@ -189,7 +189,7 @@ stopifnot(length(x) == 4, x == 95.75)
   \S4method{measurements}{OPMS}(object, ...) 
   \S4method{measurements}{matrix}(object, wanted = NULL,
     transposed = TRUE, col.names = 1L, row.names = NULL, check.names = TRUE,
-    stringsAsFactors = FALSE) 
+    stringsAsFactors = TRUE) 
 
   \S4method{well}{MOPMX}(object, ...) 
   \S4method{well}{OPM}(object, i, drop = TRUE, use.names = TRUE) 

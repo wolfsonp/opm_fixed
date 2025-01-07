@@ -711,7 +711,7 @@ setGeneric("as.data.frame")
 
 setMethod("as.data.frame", "OPM", function(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) {
+    include = FALSE, ..., stringsAsFactors = TRUE) {
   result <- as.data.frame(wells(x), NULL, optional, ...,
     stringsAsFactors = stringsAsFactors)
   colnames(result) <- RESERVED_NAMES[["well"]]
@@ -736,7 +736,7 @@ setMethod("as.data.frame", "OPM", function(x, row.names = NULL,
 
 setMethod("as.data.frame", "OPMA", function(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) {
+    include = FALSE, ..., stringsAsFactors = TRUE) {
   result <- as.data.frame(t(x@aggregated), NULL, optional, ...,
     stringsAsFactors = stringsAsFactors)
   if (length(sep))
@@ -762,7 +762,7 @@ setMethod("as.data.frame", "OPMA", function(x, row.names = NULL,
 
 setMethod("as.data.frame", "OPMD", function(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) {
+    include = FALSE, ..., stringsAsFactors = TRUE) {
   result <- callNextMethod(x, row.names, optional, sep, csv.data, settings,
     include, ..., stringsAsFactors = stringsAsFactors)
   result$Discretized <- x@discretized
@@ -783,7 +783,7 @@ setMethod("as.data.frame", "OPMD", function(x, row.names = NULL,
 
 setMethod("as.data.frame", "OPMS", function(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) {
+    include = FALSE, ..., stringsAsFactors = TRUE) {
   if (!length(row.names))
     row.names <- vector("list", length(x@plates))
   do.call(rbind, mapply(FUN = as.data.frame, x = x@plates,
@@ -795,7 +795,7 @@ setMethod("as.data.frame", "OPMS", function(x, row.names = NULL,
 
 setMethod("as.data.frame", "MOPMX", function(x, row.names = NULL,
     optional = FALSE, sep = "_", csv.data = TRUE, settings = TRUE,
-    include = FALSE, ..., stringsAsFactors = FALSE) {
+    include = FALSE, ..., stringsAsFactors = TRUE) {
   if (!length(row.names))
     row.names <- vector("list", length(x@.Data))
   do.call(rbind, mapply(FUN = as.data.frame, x = x@.Data,

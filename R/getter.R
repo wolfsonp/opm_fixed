@@ -18,7 +18,7 @@ setMethod("measurements", "OPM", function(object, i, logt0 = FALSE) {
 
 setMethod("measurements", "matrix", function(object, wanted = NULL,
     transposed = TRUE, col.names = 1L, row.names = NULL, check.names = TRUE,
-    stringsAsFactors = FALSE) {
+    stringsAsFactors = TRUE) {
   if (typeof(object) != "character")
     stop(sprintf("expected matrix of mode 'character', got '%s'",
       typeof(object)))
