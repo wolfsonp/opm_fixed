@@ -226,7 +226,7 @@ stopifnot(identical(copy, vaas_4))
   \url{http://www.biolog.com/}
 }
 \seealso{
-  base::default.stringsAsFactors base::as.data.frame
+  base::TRUE base::as.data.frame
 
   utils::edit utils::read.delim
 
